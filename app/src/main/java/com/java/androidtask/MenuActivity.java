@@ -1,8 +1,10 @@
 package com.java.androidtask;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
@@ -11,6 +13,10 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -52,5 +58,24 @@ public class MenuActivity extends AppCompatActivity {
         txtLastName.setText(lastName);
         txtEmail.setText(email);
         txtPhone.setText(phone);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.firstItem:
+                DrawerLayout drawerLayout = findViewById(R.id.drawerMenu);
+                drawerLayout.openDrawer(Gravity.LEFT);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
