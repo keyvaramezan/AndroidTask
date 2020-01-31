@@ -3,6 +3,8 @@ package com.java.androidtask;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceManager;
 
 import android.Manifest;
 import android.content.Intent;
@@ -34,5 +36,21 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        TextView txtName = findViewById(R.id.txtName);
+        TextView txtLastName = findViewById(R.id.txtLastName);
+        TextView txtEmail = findViewById(R.id.txtEmail);
+        TextView txtPhone = findViewById(R.id.txtPhone);
+        String name = PreferenceManager.getDefaultSharedPreferences(MenuActivity.this)
+                .getString("name", "Unknown name");
+        String lastName = PreferenceManager.getDefaultSharedPreferences(MenuActivity.this)
+                .getString("lastName", "Unknown last name");
+        String email = PreferenceManager.getDefaultSharedPreferences(MenuActivity.this)
+                .getString("email", "Unknown emale address");
+        String phone = PreferenceManager.getDefaultSharedPreferences(MenuActivity.this)
+                .getString("phone", "Unknown phone number");
+        txtName.setText(name);
+        txtLastName.setText(lastName);
+        txtEmail.setText(email);
+        txtPhone.setText(phone);
     }
 }
