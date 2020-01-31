@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AndroidTask</string>
+    <string name="call_phone">Call Phone</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="pleas_enter_your_name">Pleas Enter Your Name:</string>
+    <string name="pleas_enter_your_last_name">Pleas Enter Your Last Name</string>
+    <string name="pleas_enter_your_email">Pleas Enter Your Email</string>
+    <string name="please_enter_your_phone_number">Please Enter Your Phone Number</string>
+</resources>

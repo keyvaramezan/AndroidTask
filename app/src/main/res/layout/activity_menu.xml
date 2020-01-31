@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:background="#FF0000"
+            android:text="Welcome to my app"
+            android:textColor="#FFFFFF"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="left"
+        android:gravity="top"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/txtCall"
+            android:layout_margin="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="@string/call_phone"
+            />
+        <View
+            android:layout_margin="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/gray"
+
+            />
+        <TextView
+            android:id="@+id/txtProfile"
+            android:layout_margin="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="@string/edit_profile"
+            />
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
