@@ -30,7 +30,7 @@ public class MenuActivity extends AppCompatActivity {
         txtCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "+9821818313755"));
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "+9821818313755"));
                 startActivity(intent);
             }
         });
