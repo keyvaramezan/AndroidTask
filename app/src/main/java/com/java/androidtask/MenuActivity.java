@@ -7,6 +7,8 @@ import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.Intent;
@@ -20,17 +22,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        TextView txtCall = findViewById(R.id.txtCall);
+        /*TextView txtCall = findViewById(R.id.txtCall);
         txtCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "+9821818313755"));
+                Intent intent =new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "+9821818313755"));
                 startActivity(intent);
             }
         });
@@ -41,7 +45,16 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MenuActivity.this, MainActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
+        ArrayList<String> listItems = new ArrayList<>();
+        listItems.add("Dial Phone");
+        listItems.add("Edite Profile");
+        RecyclerView recycler = findViewById(R.id.recycleView);
+        TestAdapter adapter = new TestAdapter(listItems);
+        recycler.setAdapter(adapter);
+        recycler.setLayoutManager(new LinearLayoutManager(MenuActivity.this,
+                RecyclerView.VERTICAL,false));
+
         TextView txtName = findViewById(R.id.txtName);
         TextView txtLastName = findViewById(R.id.txtLastName);
         TextView txtEmail = findViewById(R.id.txtEmail);
