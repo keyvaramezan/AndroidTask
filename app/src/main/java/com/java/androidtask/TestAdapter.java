@@ -52,7 +52,6 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestViewHolder
                     switch (itemPosition){
                         case 0:
                             Intent intent =new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "+9821818313755"));
-                            intent.setPackage("com.android.server.telecom.");
                             itemView.getContext().startActivity(intent);
                             break;
                         case 1:
