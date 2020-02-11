@@ -8,4 +8,5 @@
     <color name="black">#000000</color>
     <color name="gray">#B1B1B1</color>
     <color name="EditTextColor">#ECEAEA</color>
+    <color name="red">#ff0000</color>
 </resources>

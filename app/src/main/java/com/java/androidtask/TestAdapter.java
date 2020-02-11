@@ -33,6 +33,7 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestViewHolder
     public void onBindViewHolder(@NonNull TestViewHolder holder, int position) {
         String item = myItems.get(position);
         holder.txtItem.setText(item);
+
     }
 
     @Override
@@ -45,6 +46,7 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestViewHolder
         public TestViewHolder(@NonNull final View itemView) {
             super(itemView);
             txtItem = itemView.findViewById(R.id.txtItem);
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

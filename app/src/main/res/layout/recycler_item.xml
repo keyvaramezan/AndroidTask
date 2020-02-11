@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="50dp">
     <TextView
@@ -9,8 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:textColor="@color/black"
-        android:text="@string/call_phone"
+        android:textColor="@color/gray"
         />
+    <View
+        android:id="@+id/vie1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/red"
+        android:layout_margin="7dp"
+        />
+
+
+
+
+
 
 </LinearLayout>
